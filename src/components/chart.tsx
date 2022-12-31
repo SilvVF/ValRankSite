@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
     Chart as ChartJS,
     CategoryScale,
@@ -19,6 +19,8 @@ export type ChartDataSetItem = {
 type ChartProps = {
     items: ChartDataSetItem[]
 }
+
+
 export const RanksChart: React.FC<ChartProps>  = ({items}) => {
 
     ChartJS.register(
@@ -43,7 +45,6 @@ export const RanksChart: React.FC<ChartProps>  = ({items}) => {
         },
     };
 
-
     const dataSorted = items.sort((a, b) =>  (b.elo - a.elo))
     const labels = dataSorted.map(item => item.name)
     const data = {
@@ -57,13 +58,20 @@ export const RanksChart: React.FC<ChartProps>  = ({items}) => {
         ]
     };
 
+
+
     return (
-      <div className={"max-h-screen max-w-screen"}>
+      <div className={"w-screen h-screen"}  >
           <Bar
             options={options}
             data={data}
-            className={"h-screen w-screen"}
+            className={"w-fit h-fit pl-6 pr-6"}
+            style={{
+                width: 0,
+                height: 0
+            }}
           />;
       </div>
     )
 }
+
