@@ -61,14 +61,9 @@ const userList: User[] = [
   {name: "ToastyPosty", tagline: "4950"},
 ]
 export const fetchChartData = async (): Promise<ChartDataSetItem[]>=> {
-  const responseList: MmrData[] = []
+  const allData = await Promise.all(userList.map( async user =>
+    await fetchMmrData(user.name, user.tagline)
+  ))
 
-  for (const user of userList) {
-    await fetchMmrData(user.name, user.tagline).then( response =>
-      responseList.push(response)
-    ).catch(e => console.log(e))
-  }
-  return responseList.map((it) => {
-    return { name: it.name, elo: it.elo }
-  })
+  return allData.map(it => { return {name: it.name, elo: it.elo} })
 }
