@@ -1,3 +1,9 @@
+# Valorant Leaderboards 
+
+built with t3 stack / NextJs and Tailwind 
+
+Bar chart made using https://react-chartjs-2.js.org/#examples
+
 # Create T3 App
 
 This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
