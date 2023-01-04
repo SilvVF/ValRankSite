@@ -59,6 +59,7 @@ const userList: User[] = [
   {name: "qube", tagline: "2495"},
   {name: "TeenisWeenis", tagline: "1234"},
   {name: "ToastyPosty", tagline: "4950"},
+  {name: "LiSA", tagline: "AYAYA"}
 ]
 export const fetchChartData = async (): Promise<ChartDataSetItem[]>=> {
   const allData = await Promise.all(userList.map( async user =>
