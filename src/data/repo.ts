@@ -46,14 +46,12 @@ type User = {
 }
 
 const userList: User[] = [
-  {name: "silv", tagline: "0000"},
+  {name: "silv", tagline: "004"},
   {name: "Bobdini24", tagline: "8397"},
   {name: "Coopapeen", tagline: "1937"},
   {name: "DrEvilTurtle", tagline: "6547"},
   {name: "FizzyDone", tagline: "NA1"},
-  {name: "Jenna Ortega", tagline: "Mom"},
   {name: "kzb", tagline: "6842"},
-  {name: "Leo", tagline: "2844"},
   {name: "murph", tagline: "3559"},
   {name: "Pxyl", tagline: "NA1"},
   {name: "qube", tagline: "2495"},
